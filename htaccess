@@ -1,0 +1,10 @@
+Options -MultiViews
+RewriteEngine On
+
+# 1. Força HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 2. Força www (domínio preferencial: https://www.clevitondev.com.br/)
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
