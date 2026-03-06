@@ -32,30 +32,52 @@
 
     <!-- Schema.org -->
   <script type="application/ld+json">
-  {
-   "@context": "https://schema.org",
-   "@type": "Person",
-   "name": "Cleviton Bernardino",
-   "url": "https://www.clevitondev.com.br",
-   "jobTitle": "Frontend Developer",
-   "address": {
-     "@type": "PostalAddress",
-     "addressLocality": "São José",
-     "addressRegion": "SC",
-     "addressCountry": "BR"
-   },
-   "sameAs": [
-     "https://github.com/Crevituu",
-     "https://www.linkedin.com/in/cleviton-bernardino-b054a921a",
-     "https://www.behance.net/crevitu"
-   ]
-  }
-  </script>
+{
+ "@context": "https://schema.org",
+ "@type": "Person",
+ "name": "Cleviton Bernardino",
+ "url": "https://www.clevitondev.com.br",
+ "image": "https://www.clevitondev.com.br/assets/img/home-perfil.png",
+ "jobTitle": "Frontend Developer",
+ "description": "Desenvolvedor Front End e Designer especializado em interfaces modernas e experiências digitais.",
+ "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "São José",
+   "addressRegion": "SC",
+   "addressCountry": "BR"
+ },
+ "sameAs": [
+   "https://github.com/Crevituu",
+   "https://www.linkedin.com/in/cleviton-bernardino-b054a921a",
+   "https://www.behance.net/crevitu"
+ ],
+ "knowsAbout": [
+   "HTML",
+   "CSS",
+   "JavaScript",
+   "Angular",
+   "UI Design",
+   "UX Design",
+   "Web Development"
+ ]
+}
+</script>
+
+    <!-- Schema.org WEBSITE -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Cleviton Dev",
+ "url": "https://www.clevitondev.com.br"
+}
+</script>
     
   <!-- THUMBNAIL -->
    <meta property="og:image" content="https://www.clevitondev.com.br/assets/img/og-image.jpg">
    <meta property="og:image:width" content="1200">
    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Portfólio de Cleviton Bernardino, Desenvolvedor Front End">
 
     <!-- Twitter Card -->
    <meta name="twitter:card" content="summary_large_image">
@@ -129,13 +151,14 @@
           </div>
 
           <div class="home__image">
-            <div class="blob-animate"></div>
-            <img
-              src="assets/img/home-perfil.png"
-              alt="Foto de perfil de Cleviton Bernardino, Desenvolvedor Front End"
-              class="home__perfil"
-            />
-          </div>
+  <div class="blob-animate"></div>
+  <img
+    src="assets/img/home-perfil.png"
+    alt="Foto de perfil de Cleviton Bernardino, Desenvolvedor Front End"
+    class="home__perfil"
+    loading="lazy"
+  />
+</div>
 
           <div class="home__info">
             <h3 class="home__split">Desenvolvedor</h3>
@@ -221,10 +244,11 @@
             <div class="blob-animate"></div>
             <div class="blob-animate"></div>
             <img
-              src="assets/img/about-perfil.png"
-              alt="Foto de Cleviton Bernardino, Designer Gráfico"
-              class="about__perfil"
-            />
+  src="assets/img/about-perfil.png"
+  alt="Foto de Cleviton Bernardino, Designer Gráfico"
+  class="about__perfil"
+  loading="lazy"
+/>
           </div>
         </div>
       </section>
@@ -531,6 +555,7 @@
     <script src="assets/js/main.js"></script>
   </body>
 </html>
+
 
 
 
