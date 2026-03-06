@@ -377,7 +377,7 @@ img {
   color: var(--first-color);
 }
 
-/*=============== BUTTON ===============*/
+/*=============== BOTÃO ===============*/
 .button {
   background-color: var(--body-color);
   border: 3px solid var(--first-color);
@@ -406,7 +406,7 @@ img {
     inset 8px -8px 30px var(--first-color-alt-2);
 }
 
-/*=============== ABOUT ===============*/
+/*=============== SOBRE MIM ===============*/
 .about {
   position: relative;
 }
@@ -463,7 +463,7 @@ img {
   );
 }
 
-/*=============== WORK ===============*/
+/*=============== TRABALHO/CONHECIMENTO ===============*/
 
 .work__tabs {
   background-color: var(--container-color);
@@ -565,7 +565,7 @@ img {
   color: var(--first-color);
 }
 
-/*=============== CONTACT ===============*/
+/*=============== CONTATO ===============*/
 .contact__container {
   row-gap: 4rem;
   padding-bottom: 2rem;
