@@ -5,6 +5,39 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# 2. Força www (domínio preferencial: https://www.clevitondev.com.br/)
+# 2. Força www
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 3. Cache de recursos
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Imagens - 1 ano
+  ExpiresByType image/png             "access plus 1 year"
+  ExpiresByType image/jpg             "access plus 1 year"
+  ExpiresByType image/jpeg            "access plus 1 year"
+  ExpiresByType image/gif             "access plus 1 year"
+  ExpiresByType image/webp            "access plus 1 year"
+  ExpiresByType image/svg+xml        "access plus 1 year"
+  ExpiresByType image/x-icon         "access plus 1 year"
+
+  # CSS e JS - 1 mês
+  ExpiresByType text/css              "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript       "access plus 1 month"
+
+  # Fontes - 1 ano
+  ExpiresByType font/woff2            "access plus 1 year"
+  ExpiresByType font/woff             "access plus 1 year"
+</IfModule>
+
+# 4. Cabeçalhos de cache
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "max-age=2592000, public"
+  </FilesMatch>
+  <FilesMatch "\.(png|jpg|jpeg|gif|webp|svg|ico)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+</IfModule>
