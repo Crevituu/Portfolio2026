@@ -135,6 +135,7 @@ img {
   text-align: center;
   font-size: var(--h1-font-size);
   margin-bottom: 3rem;
+  margin-top: -69px;
 }
 
 .section__title span {
