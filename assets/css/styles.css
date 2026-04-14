@@ -881,7 +881,7 @@ img {
 
   .about__shadow {
     height: 600px;
-    bottom: 0;
+    bottom: 15px;
   }
 
   .work__container {
